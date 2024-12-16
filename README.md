@@ -1,0 +1,1 @@
+# Prettier-vite-config
