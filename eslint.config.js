@@ -18,13 +18,22 @@ export default [
   {
     plugins: {
       "react-refresh": reactRefresh,
+      "@stylistic": require("@stylistic/eslint-plugin"), // Adiciona o plugin Stylistic
     },
     rules: {
+      // React Refresh
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
-      '@stylistic/ts/semi': 'error',
+
+      // Stylistic Rules
+      "@stylistic/indent": ["error", "tab", { SwitchCase: 1 }], // Usa tabulação para indentação ao invés de spaces
+      "@stylistic/ts/semi": ["error", "always"], // Sempre usa ponto e vírgula no final
+      "@stylistic/quotes": ["error", "double"], // Usa aspas duplas
+      "@stylistic/bracket-spacing": ["error", "always"], // Adiciona espaços dentro de chaves { chave: valor }
+      "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: false }], // Coloca chaves em linhas diferentes
+      "@stylistic/arrow-parens": ["error", "always"], // Sempre adiciona parênteses em arrow functions
     },
   },
 ];
