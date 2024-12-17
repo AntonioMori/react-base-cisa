@@ -21,6 +21,11 @@ export default [
 			"react-refresh": reactRefresh,
 			"@stylistic": stylistic, // Importando o plugin corretamente no ESM
 		},
+		settings: {
+			react: {
+				version: "detect", // Detecta automaticamente a versão do React
+			},
+		},
 		rules: {
 			// React Refresh
 			"react-refresh/only-export-components": [
@@ -38,4 +43,5 @@ export default [
 			"@stylistic/arrow-parens": ["error", "always"], // Sempre adiciona parênteses em arrow functions
 		},
 	},
+	
 ];
