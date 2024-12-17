@@ -36,10 +36,12 @@ export default [
 
 			// Stylistic Rules disponíveis em "https://eslint.style/packages/default"
 			"@stylistic/array-bracket-spacing": [ "error", "always", { "objectsInArrays": true, "arraysInArrays": true } ], // adiciona espaçamento entre colchetes, exemplo [ componente1, compoentente2 ] e não [componente1,componente2]
-			"@stylistic/arrow-parens": [ "error", "always" ], // Sempre adiciona parênteses em arrow functions
-			"@stylistic/arrow-spacing": "error", // Adiciona espaço antes e depois da seta em arrow functions de (a)=>{} para (a) => {}
-			"@stylistic/block-spacing": "error", // Adiciona espaço antes e depois de blocos exemplo     de   if(true){}    para   if (true) { return true; }
-			"@stylistic/no-trailing-spaces": [ "error", { "skipBlankLines": true, "ignoreComments": true } ], // Não permite espaços em branco no final das linhas
+			"@stylistic/arrow-parens": [ "error", "always" ], // Sempre adiciona parênteses em arrow functions mesmo que ela tenha somente um parâmentro exemplo "(a) => {}" e não "(a) => retunr teste;"
+			"@stylistic/arrow-spacing": "error", // Adiciona espaço antes e depois da seta em arrow functions de "(a)=>{}" para "(a) => {}"
+			"@stylistic/block-spacing": "error", // Adiciona espaço antes e depois de blocos DENTRO das chaves exemplo     de   "if(true){}"    para   "if(true){ return true; }"
+			"@stylistic/no-trailing-spaces": [ "error", { "skipBlankLines": true, "ignoreComments": true } ], // Não permite espaços em branco no final das linhas um espaço após o ; "isso melhora o bundle e assertividade da detecção de mudanças do github"
+			"@stylistic/indent": [ "error", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
+			
 			"@stylistic/brace-style": [ "error", "1tbs", { allowSingleLine: false } ], // Coloca chaves em linhas diferentes
 			
 			
@@ -47,7 +49,6 @@ export default [
 			// "@stylistic/camelcase": "error", // Usa camelCase para variáveis e funções
 			"@stylistic/quotes": [ "error", "double" ], // Usa aspas duplas
 			"@stylistic/comma-spacing": "error", // Adiciona espaço após vírgulas
-			"@stylistic/indent": [ "error", "tab", { SwitchCase: 1 } ], // Usa tabulação para indentação ao invés de spaces
 			"@stylistic/semi": [ "error", "always" ], // Sempre usa ponto e vírgula no final
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
 			//recomendações copilot

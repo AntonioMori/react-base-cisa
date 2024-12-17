@@ -6,20 +6,18 @@
 	"editor.formatOnSave": true, // habilita formatar o código ao salvar
 	"editor.tabSize": 2, // define o tamanho da tabulação
 	"editor.insertSpaces": false, // define se a tabulação é feita com espaços ou tabs
-	"editor.codeActionsOnSave": { 
+	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always" // define que o eslint deve corrigir automaticamente os problemas ao salvar
 	},
 	"files.eol": "\n", // define o tipo de quebra de linha
 	"typescript.tsdk": "node_modules/typescript/lib", // define o caminho para o typescript
-	"eslint.workingDirectories": [  // define o diretório de trabalho do eslint
-		"./"  
+	"eslint.workingDirectories": [ // define o diretório de trabalho do eslint
+		"./"
 	],
 	"[javascript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	}
 }
-
-
