@@ -24,6 +24,7 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
+      '@stylistic/ts/semi': 'error',
     },
   },
 ];
