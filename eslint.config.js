@@ -35,20 +35,31 @@ export default [
 			"react/react-in-jsx-scope": "off", // Desativa a exigência de React no escopo
 
 			// Stylistic Rules disponíveis em "https://eslint.style/packages/default"
-			"@stylistic/array-bracket-spacing": [ "error", "always", { "objectsInArrays": true, "arraysInArrays": true } ], // adiciona espaçamento entre colchetes, exemplo [ componente1, compoentente2 ] e não [componente1,componente2]
-			"@stylistic/arrow-parens": [ "error", "always" ], // Sempre adiciona parênteses em arrow functions mesmo que ela tenha somente um parâmentro exemplo "(a) => {}" e não "(a) => retunr teste;"
-			"@stylistic/arrow-spacing": "error", // Adiciona espaço antes e depois da seta em arrow functions de "(a)=>{}" para "(a) => {}"
-			"@stylistic/block-spacing": "error", // Adiciona espaço antes e depois de blocos DENTRO das chaves exemplo     de   "if(true){}"    para   "if(true){ return true; }"
-			"@stylistic/no-trailing-spaces": [ "error", { "skipBlankLines": true, "ignoreComments": true } ], // Não permite espaços em branco no final das linhas um espaço após o ; "isso melhora o bundle e assertividade da detecção de mudanças do github"
-			"@stylistic/indent": [ "error", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
-			
+			"@stylistic/array-bracket-spacing": [ "warn", "always", { "objectsInArrays": true, "arraysInArrays": true } ], // adiciona espaçamento entre colchetes, exemplo [ componente1, compoentente2 ] e não [componente1,componente2]
+			"@stylistic/arrow-parens": [ "warn", "always" ], // Sempre adiciona parênteses em arrow functions mesmo que ela tenha somente um parâmentro exemplo "(a) => {}" e não "(a) => retunr teste;"
+			"@stylistic/arrow-spacing": "warn", // Adiciona espaço antes e depois da seta em arrow functions de "(a)=>{}" para "(a) => {}"
+			"@stylistic/block-spacing": "warn", // Adiciona espaço antes e depois de blocos DENTRO das chaves exemplo     de   "if(true){}"    para   "if(true){ return true; }"
+			"@stylistic/no-trailing-spaces": [ "warn", { "skipBlankLines": true, "ignoreComments": true } ], // Não permite espaços em branco no final das linhas um espaço após o ; "isso melhora o bundle e assertividade da detecção de mudanças do github"
 			"@stylistic/brace-style": [ "error", "1tbs", { allowSingleLine: false } ], // Coloca chaves em linhas diferentes
+			"@stylistic/comma-dangle": [ "error", {  //exemplo do que é o always-multiline no link ""
+				"arrays": "always-multiline",
+				"objects": "always-multiline",
+				"imports": "always-multiline",
+				"exports": "always-multiline",
+				"functions": "always-multiline",
+				"importAttributes": "always-multiline",
+				"dynamicImports": "always-multiline",
+			} ],
+			"@stylistic/comma-spacing": [ "warn", { "before": false, "after": true } ], // Adiciona espaço após vírgulas
+			"@stylistic/comma-style": [ "error", "last" ], // Adiciona vírgula no final e nao no início da linha
+
+
 			
-			
-			
+
+
+			"@stylistic/indent": [ "warn", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
 			// "@stylistic/camelcase": "error", // Usa camelCase para variáveis e funções
 			"@stylistic/quotes": [ "error", "double" ], // Usa aspas duplas
-			"@stylistic/comma-spacing": "error", // Adiciona espaço após vírgulas
 			"@stylistic/semi": [ "error", "always" ], // Sempre usa ponto e vírgula no final
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
 			//recomendações copilot

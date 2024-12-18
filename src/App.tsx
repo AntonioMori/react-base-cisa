@@ -5,16 +5,25 @@ import "./App.css";
 
 function App () {
 	const [ count, setCount ] = useState(0);
-	const [ teste ] = useState(0);
-	
+	const [ teste ] = useState([ 1, 2, 3, 4, 5 ]);
+
 	console.log("teste", teste);
 
-	
+	const arrowFunctionTeste = () => {
+		return null;
+	};
 
+
+	console.log("arrowFunctionTeste", arrowFunctionTeste);
 
 	return (
 		<>
-			<div>
+			<div
+				style={{
+					backgroundColor: "ActiveBorder",
+
+				}}
+			>
 				<a href="https://vite.dev" target="_blank" rel="noreferrer">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
 				</a>
