@@ -12,6 +12,10 @@ function App () {
 	const arrowFunctionTeste = () => {
 		return null;
 	};
+	const teste2 = () => {
+		return null;
+	};
+	console.log(teste2);
 
 
 	console.log("arrowFunctionTeste", arrowFunctionTeste);
