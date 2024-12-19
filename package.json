@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "lint:fix": "eslint . --fix"
+    "fix": "eslint . --fix"
   },
   "dependencies": {
     "prettier-vite-config": "file:",

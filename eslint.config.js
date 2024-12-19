@@ -41,7 +41,7 @@ export default [
 			"@stylistic/block-spacing": "warn", // Adiciona espaço antes e depois de blocos DENTRO das chaves exemplo     de   "if(true){}"    para   "if(true){ return true; }"
 			"@stylistic/no-trailing-spaces": [ "warn", { "skipBlankLines": true, "ignoreComments": true } ], // Não permite espaços em branco no final das linhas um espaço após o ; "isso melhora o bundle e assertividade da detecção de mudanças do github"
 			"@stylistic/brace-style": [ "warn", "1tbs", { allowSingleLine: false } ], //estilo das chaves de blocos, se será na mesma linha como } esle { } 
-			"@stylistic/comma-dangle": [ "warn", {  //comma dangle força que a virgula fique no final de objetos e arrays e não no início
+			"@stylistic/comma-dangle": [ "warn", { //comma dangle força que a virgula fique no final de objetos e arrays e não no início
 				"arrays": "always-multiline",
 				"objects": "always-multiline",
 				"imports": "always-multiline",
@@ -68,33 +68,79 @@ export default [
 
 			"react/jsx-closing-bracket-location": [ 1, "tag-aligned" ], // deixa alinhado o fechamento da tag "/>"
 			"react/jsx-closing-tag-location": [ 1, "tag-aligned" ], // deixa alinhado o fechamento da tag com a abertura da tag <div> e </div>
-			"@stylistic/jsx-curly-brace-presence": [ "warn", { "props": "ignore", "children": "ignore" } ], // obriga o uso de chaves nas props
+			// "@stylistic/jsx-curly-brace-presence": [ "warn", { "props": "ignore", "children": "ignore" } ], // obriga o uso de chaves nas props
 				//exemplo
 				// errado: <Button variant="contained" />
 				// certo: <Button variant={"contained"} />
 			"@stylistic/jsx-curly-newline": [ "warn", "consistent" ], // Adiciona quebra de linha após abrir chaves
-			// "@stylistic/jsx-curly-spacing": [ "warn", { "when": "never", "children": false } ], // Adiciona espaçamento entre chaves
+        // "@stylistic/jsx-curly-spacing": [ "warn", { "when": "never", "children": false } ], // Adiciona espaçamento entre chaves
 			"@stylistic/jsx-first-prop-new-line": [ "warn", "multiline-multiprop" ], // Adiciona quebra de linha após a primeira propriedade 
-			// se houver mais de uma e a tag estiver em mais de uma linha
+			  // se houver mais de uma e a tag estiver em mais de uma linha
 			"@stylistic/jsx-function-call-newline": [ "warn", "always" ], // força que a chamada de função jsx fique em uma linha separada
 			"@stylistic/jsx-indent": [ "warn", "tab" ],
-			// faz a indentação do jsx com tabulação e não espaços e verifica os atributos
+			  // faz a indentação do jsx com tabulação e não espaços e verifica os atributos
 			"@stylistic/jsx-indent-props": [ "warn", "tab" ], // faz a indentação dos atributos de um componente jsx	
-			//exemplo: 
-			// <Componente
-			//		prop1="teste"
-			//		prop2="teste"
-			//	/>
+        //exemplo: 
+        // <Componente
+        //		prop1="teste"
+        //		prop2="teste"
+        //	/>
 			"@stylistic/jsx-max-props-per-line": [ "warn", { "maximum": { "single": 4, "multi": 1 } } ],
-			// limita a quantidade de props por linha , se for uma propriedade por linha max 4, se for mais de 4 propriedades por linha 
-			//então limita a 1 por linha
+        // limita a quantidade de props por linha , se for uma propriedade por linha max 4, se for mais de 4 propriedades por linha 
+        //então limita a 1 por linha
 			"@stylistic/jsx-pascal-case": [ "error", { allowAllCaps: false, allowNamespace: false, allowLeadingUnderscore: true } ],
-			// obriga que os componentes jsx sejam escritos em PascalCase
-			"@stylistic/jsx-props-no-multi-spaces": "warn", // não permite espaços em branco entre as props
+			  // obriga que os componentes jsx sejam escritos em PascalCase
+			"@stylistic/jsx-props-no-multi-spaces": "warn", // não permite mais de um espaço em branco entre as props na mesma linha 
+        //exemplo errado:
+        // <Divider       variant="middle"      orientation="vertical"   />
+        //exemplo correto: 
+        // <Divider variant="middle" orientation="vertical" />
+			"@stylistic/jsx-self-closing-comp": [ "warn", { "component": true } ],
+        // quando o componente não tem filhos ele deve ser uma tag auto fechada
+        //exemplo errado:
+        // <Componente> </Componente>
+        //exemplo correto:
+        // <Componente /> 
+			
 
-
-
-
+			// "@stylistic/jsx-sort-props": [ "warn", { //organiza em ordem alfabética as props de um componente jsx
+        //   // "callbacksLast": <boolean>,
+        //   // "shorthandLast": <boolean>,
+        // 	"shorthandFirst": true,
+        // 	"multiline": "last",
+        // 	"ignoreCase": true,
+        // 	"noSortAlphabetically": false,
+        // 	"locale": "auto",
+        // } ],
+			"@stylistic/jsx-tag-spacing": [ "warn", {
+				"closingSlash": "never", // não permite espaçamento no fechamento da tag exemplo correto: <Componente/> errado: <Componente />
+				"afterOpening": "never", // não permite espaçamento após a abertura da tag exemplo correto: <Componente/> errado: < Componente/>
+			} ],
+			"@stylistic/jsx-wrap-multilines": [ // força com que o return tenha () quando o componente jsx tiver mais de uma linha
+				"warn",
+				{
+					"declaration": "ignore",
+					"assignment": "ignore",
+					"return": "parens",
+					"arrow": "ignore",
+					"condition": "ignore",
+					"logical": "ignore",
+					"prop": "ignore",
+					"propertyValue": "ignore",
+				},
+			],
+			"@stylistic/keyword-spacing": [ "warn", { "before": true, "after": true } ], // Adiciona espaço antes e depois das palavras-chave
+      //else e else if
+			"@stylistic/multiline-ternary": [ "warn", "always-multiline" ], // força que o ternário seja multilinha 
+      //exemplo 
+      // isValid 
+      // ?   <Componente1 />
+      // :   <Componente2 />
+			"@stylistic/no-extra-semi": "warn", // não permite ponto e vírgula extras ;; ou retunr x;;
+			"@stylistic/no-floating-decimal": "warn", //sem .5 ou 2.0, correto: 0.5 ou 2.0
+			"@stylistic/no-mixed-operators": "warn", //não misturar operadores sem parênteses
+			"@stylistic/no-multi-spaces": "warn", //não permite mais de um espaço em branco em qualquer lugar
+      
 
 
 
@@ -108,7 +154,6 @@ export default [
 			// "@stylistic/comma-dangle": ["error", "always-multiline"], // Adiciona vírgula no final de objetos e arrays multiline
 			"@stylistic/eol-last": [ "error", "always" ], // Garante uma linha em branco no final do arquivo
 			// "@stylistic/space-before-function-paren": [ "error", "always" ], // Adiciona espaço antes dos parênteses das funções
-			"@stylistic/keyword-spacing": [ "error", { "before": true, "after": true } ], // Adiciona espaço antes e depois das palavras-chave
 			"@stylistic/space-infix-ops": "error", // Adiciona espaço ao redor dos operadores infix
 			"@stylistic/space-before-blocks": [ "error", "always" ], // Adiciona espaço antes dos blocos
 			"@stylistic/space-in-parens": [ "error", "never" ], // Não permite espaços dentro dos parênteses
