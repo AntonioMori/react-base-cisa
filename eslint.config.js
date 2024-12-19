@@ -140,25 +140,14 @@ export default [
 			"@stylistic/no-floating-decimal": "warn", //sem .5 ou 2.0, correto: 0.5 ou 2.0
 			"@stylistic/no-mixed-operators": "warn", //não misturar operadores sem parênteses
 			"@stylistic/no-multi-spaces": "warn", //não permite mais de um espaço em branco em qualquer lugar
-      
-
-
-
-
-
-			// "@stylistic/camelcase": "error", // Usa camelCase para variáveis e funções
-			"@stylistic/quotes": [ "error", "double" ], // Usa aspas duplas
-			"@stylistic/semi": [ "error", "always" ], // Sempre usa ponto e vírgula no final
+			"@stylistic/quotes": [ "warn", "double" ], // Usa aspas duplas
+			"@stylistic/semi": [ "warn", "always" ], // Sempre usa ponto e vírgula no final
+			"@stylistic/camelcase": "error", // Usa camelCase para variáveis e funções
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
-			//recomendações copilot
-			// "@stylistic/comma-dangle": ["error", "always-multiline"], // Adiciona vírgula no final de objetos e arrays multiline
-			"@stylistic/eol-last": [ "error", "always" ], // Garante uma linha em branco no final do arquivo
-			// "@stylistic/space-before-function-paren": [ "error", "always" ], // Adiciona espaço antes dos parênteses das funções
-			"@stylistic/space-infix-ops": "error", // Adiciona espaço ao redor dos operadores infix
-			"@stylistic/space-before-blocks": [ "error", "always" ], // Adiciona espaço antes dos blocos
-			"@stylistic/space-in-parens": [ "error", "never" ], // Não permite espaços dentro dos parênteses
+			"@stylistic/eol-last": [ "warn", "always" ], // Garante uma linha em branco no final do arquivo
+			"@stylistic/space-before-blocks": [ "warn", "always" ], // Adiciona espaço antes dos blocos
 			"@stylistic/func-call-spacing": [ "error", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
-			"@stylistic/key-spacing": [ "error", { "beforeColon": false, "afterColon": true } ], // Adiciona espaço após os dois-pontos em objetos
+
 		},
 	},
 

@@ -39,7 +39,7 @@ function App () {
 						src={viteLogo}
 						className="logo"
 						alt={"Vite logo"}
-						style={{  }}
+						style={{ }}
 						accessKey="teste"
 					/>
 				</a>
