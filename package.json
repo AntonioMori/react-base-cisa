@@ -11,10 +11,14 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
+    "@mui/material": "^6.2.1",
+    "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.34",
     "prettier-vite-config": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.0.2",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {

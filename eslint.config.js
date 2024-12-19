@@ -57,7 +57,7 @@ export default [
 
 
       
-      "@stylistic/implicit-arrow-linebreak": [ "warn", "beside" ], // Adiciona a seta da arrow function na mesma linha que o corpo da função
+			"@stylistic/implicit-arrow-linebreak": [ "warn", "beside" ], // Adiciona a seta da arrow function na mesma linha que o corpo da função
 			"@stylistic/indent": [ "warn", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
 			"@stylistic/indent-binary-ops": [ "warn", "tab" ], // Usa tabulação para indentação de operadores binários ** && etc
 			// "@stylistic/jsx-child-element-spacing": "warn", // Adiciona espaço entre elementos JSX exemplo 
@@ -143,14 +143,12 @@ export default [
 			"@stylistic/no-extra-semi": "warn", // não permite ponto e vírgula extras ;; ou retunr x;;
 			"@stylistic/quotes": [ "warn", "double" ], // Usa aspas duplas
 			"@stylistic/semi": [ "warn", "always" ], // Sempre usa ponto e vírgula no final
-			
-      "@stylistic/no-floating-decimal": "warn", //sem .5 ou 2.0, correto: 0.5 ou 2.0
+			"@stylistic/no-floating-decimal": "warn", //sem .5 ou 2.0, correto: 0.5 ou 2.0
 			"@stylistic/no-mixed-operators": "warn", //não misturar operadores sem parênteses
 			"@stylistic/no-multi-spaces": "warn", //não permite mais de um espaço em branco em qualquer lugar
-			"@stylistic/camelcase": "error", // Usa camelCase para variáveis e funções
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
 			"@stylistic/eol-last": [ "warn", "always" ], // Garante uma linha em branco no final do arquivo
-			"@stylistic/func-call-spacing": [ "error", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
+			"@stylistic/func-call-spacing": [ "warn", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
 
 		},
 	},
