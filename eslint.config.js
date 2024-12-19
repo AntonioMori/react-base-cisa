@@ -117,8 +117,10 @@ export default [
         // 	"locale": "auto",
         // } ],
 			"@stylistic/jsx-tag-spacing": [ "warn", {
-				"closingSlash": "never", // não permite espaçamento no fechamento da tag exemplo correto: <Componente/> errado: <Componente />
-				"afterOpening": "never", // não permite espaçamento após a abertura da tag exemplo correto: <Componente/> errado: < Componente/>
+				closingSlash: "never", // Evita "/" desnecessários em tags de fechamento
+				// beforeSelfClosing: "never", // Remove espaços antes de "/>"
+				afterOpening: "never", // Remove espaços depois de "<Tag"
+				// beforeClosing: "never", // Remove espaços antes de ">"
 			} ],
 			"@stylistic/jsx-wrap-multilines": [ // força com que o return tenha () quando o componente jsx tiver mais de uma linha
 				"warn",

@@ -35,7 +35,7 @@ function App () {
               <button onClick={signOut}>Sair</button>
             </header> */}
 				<Routes>
-					<Route path='/' element={<Home/>}/>
+					<Route path='/' element={<Home />} />
 				</Routes>
 			</main>
 		</Router>

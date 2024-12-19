@@ -28,6 +28,7 @@ O ESLint está configurado para manter boas práticas de código e estilos consi
 - `"react-refresh/only-export-components": "warn"`: Força que apenas componentes sejam exportados em arquivos React.
 - `"react/react-in-jsx-scope": "off"`: Desativa a exigência de importar `React` em arquivos JSX (não necessário com Vite).
 
+---
 #### Stylistic Rules
 
 1. **`@stylistic/array-bracket-spacing`**
