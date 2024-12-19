@@ -58,14 +58,14 @@ A estrutura do projeto é organizada para facilitar o desenvolvimento, manutenç
 
 ```
 src/
-├── assets/  	# Arquivos estáticos como imagens, fontes, etc.
-├── components/  # Componentes reutilizáveis da interface
+├── assets/  	                  # Arquivos estáticos como imagens, fontes, etc.
+├── components/                  # Componentes reutilizáveis da interface
 │   ├── Button/
 │   │   ├── Button.tsx
 │   │   ├── Button.test.tsx
 │   │   └── Button.module.css
-├── hooks/           # Custom Hooks
-├── pages/           # Páginas do projeto (rotas principais)
+├── hooks/                       # Custom Hooks
+├── pages/                       # Páginas do projeto (rotas principais)
 │   ├── Home/
 │   │   ├── index.tsx
 │   │   ├── Home.test.tsx
@@ -74,16 +74,16 @@ src/
 │       ├── index.tsx
 │       ├── About.test.tsx
 │       └── About.module.css
-├── services/    	# Configurações de APIs e AWS SDK
-├── state/   			# Configuração do Zustand (gerenciamento de estado)
-├── utils/                # Funções utilitárias e helpers
-├── App.tsx               # Arquivo principal do React (root onde serão aplicados Authenticators e contexts)
-├── main.tsx              # Arquivo de inicialização com ReactDOM
-└── vite-env.d.ts         # Tipos específicos do Vite
+├── services/    	             # Configurações de APIs e AWS SDK
+├── state/   			         # Configuração do Zustand (gerenciamento de estado)
+├── utils/                       # Funções utilitárias e helpers
+├── App.tsx                      # Arquivo principal do React (root onde serão aplicados Authenticators, contexts e routes)
+├── main.tsx                     # Arquivo de inicialização com ReactDOM
+└── vite-env.d.ts                # Tipos específicos do Vite
 
 public/
-├── index.html            # Template principal
-├── favicon.ico           # Favicon do site
+├── index.html                   # Template principal
+├── favicon.ico                  # Favicon do site
 ```
 
 ---
@@ -97,6 +97,7 @@ public/
 - **Zustand**: Biblioteca leve para gerenciamento de estado global, oferecendo simplicidade e flexibilidade.
 - **AWS SDK**: Para integração com serviços AWS como Lambda e API Gateway.
 - **AWS Lambda e API Gateway**: Estrutura para construir e expor APIs serverless de forma escalável.
+- **Material UI**: Biblioteca de componentes react que implementa o "Google's Material Design".
 
 ---
 
