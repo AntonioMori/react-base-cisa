@@ -28,12 +28,7 @@ function App () {
 
 	return (
 		<>
-			<div
-				style={{
-					backgroundColor: "ActiveBorder",
-
-				}}
-			>
+			<div>
 				<a href="https://vite.dev" target="_blank" rel="noreferrer">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
 				</a>
