@@ -1,6 +1,6 @@
 {
 	"files.autoSave": "afterDelay", // Salva automaticamente após um pequeno atraso
-	"files.autoSaveDelay": 2000, // D<efine o tempo em milissegundos (1 segundo)
+	"files.autoSaveDelay": 3000, // D<efine o tempo em milissegundos (1 segundo)
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint", //define o eslint como formatador padrão do vscode estyles
 	"eslint.format.enable": true, //habilita o eslint para formatar o código
 	"editor.formatOnSave": true, // habilita formatar o código ao salvar

@@ -48,13 +48,8 @@ export default function Menu() {
 
 	return (
 		<>
-			<div style={
-				{
-					marginTop: "40px",
-				}
-			}
-			>
-				<a href={"https://vite.dev"} target={"_blank"} rel={"noreferrer"} >
+			<div>
+				<a href={"https://vite.dev"} target={"_blank"} rel={"noreferrer"}>
 					<img
 						src={viteLogo}
 						className="logo"
@@ -64,25 +59,23 @@ export default function Menu() {
 					/>
 				</a>
 				<a href={"https://react.dev"} target={"_blank"} rel={"noreferrer"}>
-					<img src={reactLogo} className={"logo react"} alt={"React logo"} />
+					<img src={reactLogo} className={"logo react"} alt={"React logo"}/>
 				</a>
 			</div>
 			<h1>Vite + React</h1>
-			<div className={"card"}>
+			<div>
 				<button onClick={() => setCount((count: number) => count + 1)}>
 					count is {count}
 				</button>
 				
 				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR{"2a "}
+					Edit <code>src/App.tsx </code> and save to test HMR
 				</p>
-
-
 			</div>
 			
 			<p className={"read-the-docs"}>
 				<div>
-					oiteste<strong>teste dois</strong>
+					Protótipo <strong>V.2</strong>
 				</div>
 				Click on the Vite and React logos to learn more
 			</p>
@@ -94,14 +87,17 @@ export default function Menu() {
 				alignItems="center"
 			>
 			
-				<Grid size={{ xs: 6, md: 8 }}>
+				<Grid size={{ xs: 6, md: 12 }}>
 					<Typography variant="h4" component="h1" gutterBottom>
-						Menu Inicial
+						MATERIAL UI
 					</Typography>
 				</Grid>
 			
-				<Grid size={{ xs: 6, md: 8 }}>
-					<Button onClick={() => alert("Botão clicado!")}>
+				<Grid size={{ xs: 6, md: 12 }}>
+					<Button
+						onClick={() => alert("Botão clicado!")}
+						variant="contained"
+					>
 						Aperte para exibir um alerta
 					</Button>
 				</Grid>
