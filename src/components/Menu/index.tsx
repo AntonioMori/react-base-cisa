@@ -92,9 +92,6 @@ export default function Menu() {
 				spacing={2}
 				justifyContent="center"
 				alignItems="center"
-				sx={{
-					backgroundColor: "primary.main",
-				}}
 			>
 			
 				<Grid size={{ xs: 6, md: 8 }}>
