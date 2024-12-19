@@ -156,7 +156,7 @@ aws apigateway import-rest-api --body 'api-config.json'
 
 ---
 
-mais regras de eslint stylistic , testes com jest, adicionar eslint verificação de imports e exports,
+testes com jest, adicionar eslint verificação de imports e exports,
 
 na parte dos testes a gente tem que pensar , em quais partes mais dao erros durante o desenvolvimento e quais são
 mais chatas de testar? 
