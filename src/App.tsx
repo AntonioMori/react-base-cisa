@@ -28,30 +28,41 @@ function App () {
 
 	return (
 		<>
-			<div>
-				<a href="https://vite.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
+			<div style={
+				{
+					marginTop: "40px",
+				}
+			}
+			>
+				<a href={"https://vite.dev"} target={"_blank"} rel={"noreferrer"} >
+					<img
+						src={viteLogo}
+						className="logo"
+						alt={"Vite logo"}
+						style={{  }}
+						accessKey="teste"
+					/>
 				</a>
-				<a href="https://react.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
+				<a href={"https://react.dev"} target={"_blank"} rel={"noreferrer"}>
+					<img src={reactLogo} className={"logo react"} alt={"React logo"} />
 				</a>
 			</div>
 			<h1>Vite + React</h1>
-			<div className="card">
+			<div className={"card"}>
 				<button onClick={() => setCount((count) => count + 1)}>
 					count is {count}
 				</button>
+				
 				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR{"2a "
-					}
+					Edit <code>src/App.tsx</code> and save to test HMR{"2a "}
 				</p>
+
+
 			</div>
-			<p className="read-the-docs">
+			
+			<p className={"read-the-docs"}>
 				<div>
-					oiteste
-					<strong>
-						teste dois
-					</strong>
+					oiteste<strong>teste dois</strong>
 				</div>
 				Click on the Vite and React logos to learn more
 			</p>
