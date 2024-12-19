@@ -16,7 +16,13 @@ function App () {
 		return null;
 	};
 	console.log(teste2);
-
+	 
+	function fn(para1: number, para2:number): string {
+		const a = para1 + para2;
+		return a.toString();
+	}
+	
+	console.log(fn);
 
 	console.log("arrowFunctionTeste", arrowFunctionTeste);
 
@@ -41,7 +47,7 @@ function App () {
 					count is {count}
 				</button>
 				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR{"aaa "
+					Edit <code>src/App.tsx</code> and save to test HMR{"2a "
 					}
 				</p>
 			</div>
@@ -59,3 +65,5 @@ function App () {
 }
 
 export default App;
+
+

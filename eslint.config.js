@@ -53,26 +53,28 @@ export default [
 			"@stylistic/comma-spacing": [ "warn", { "before": false, "after": true } ], // Adiciona espaço após vírgulas
 			"@stylistic/comma-style": [ "warn", "last" ], // Adiciona vírgula no final e nao no início da linha
 			"@stylistic/curly-newline": [ "warn", "always" ], // obriga a quebra de linha após abrir um bloc com chaves {}
+			"@stylistic/implicit-arrow-linebreak": [ "warn", "beside" ], // Adiciona a seta da arrow function na mesma linha que o corpo da função
+			"@stylistic/indent": [ "warn", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
+			"@stylistic/indent-binary-ops": [ "warn", "tab" ],
+			
 
 
 
 
-
-			// "@stylistic/indent": [ "warn", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
 			// "@stylistic/camelcase": "error", // Usa camelCase para variáveis e funções
-			// "@stylistic/quotes": [ "error", "double" ], // Usa aspas duplas
-			// "@stylistic/semi": [ "error", "always" ], // Sempre usa ponto e vírgula no final
-			// "@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
-			// //recomendações copilot
-			// // "@stylistic/comma-dangle": ["error", "always-multiline"], // Adiciona vírgula no final de objetos e arrays multiline
-			// "@stylistic/eol-last": [ "error", "always" ], // Garante uma linha em branco no final do arquivo
+			"@stylistic/quotes": [ "error", "double" ], // Usa aspas duplas
+			"@stylistic/semi": [ "error", "always" ], // Sempre usa ponto e vírgula no final
+			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
+			//recomendações copilot
+			// "@stylistic/comma-dangle": ["error", "always-multiline"], // Adiciona vírgula no final de objetos e arrays multiline
+			"@stylistic/eol-last": [ "error", "always" ], // Garante uma linha em branco no final do arquivo
 			// "@stylistic/space-before-function-paren": [ "error", "always" ], // Adiciona espaço antes dos parênteses das funções
-			// "@stylistic/keyword-spacing": [ "error", { "before": true, "after": true } ], // Adiciona espaço antes e depois das palavras-chave
-			// "@stylistic/space-infix-ops": "error", // Adiciona espaço ao redor dos operadores infix
-			// "@stylistic/space-before-blocks": [ "error", "always" ], // Adiciona espaço antes dos blocos
-			// "@stylistic/space-in-parens": [ "error", "never" ], // Não permite espaços dentro dos parênteses
-			// "@stylistic/func-call-spacing": [ "error", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
-			// "@stylistic/key-spacing": [ "error", { "beforeColon": false, "afterColon": true } ], // Adiciona espaço após os dois-pontos em objetos
+			"@stylistic/keyword-spacing": [ "error", { "before": true, "after": true } ], // Adiciona espaço antes e depois das palavras-chave
+			"@stylistic/space-infix-ops": "error", // Adiciona espaço ao redor dos operadores infix
+			"@stylistic/space-before-blocks": [ "error", "always" ], // Adiciona espaço antes dos blocos
+			"@stylistic/space-in-parens": [ "error", "never" ], // Não permite espaços dentro dos parênteses
+			"@stylistic/func-call-spacing": [ "error", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
+			"@stylistic/key-spacing": [ "error", { "beforeColon": false, "afterColon": true } ], // Adiciona espaço após os dois-pontos em objetos
 		},
 	},
 
