@@ -53,9 +53,13 @@ export default function Menu() {
 					<img
 						src={viteLogo}
 						className="logo"
-						alt={"Vite logo"}
 						style={{ }}
-						accessKey="teste"
+						alt="vite logo"
+					/>
+					<img
+						src={viteLogo}
+						className="logo"
+						alt="Vite logo"
 					/>
 				</a>
 				<a href={"https://react.dev"} target={"_blank"} rel={"noreferrer"}>

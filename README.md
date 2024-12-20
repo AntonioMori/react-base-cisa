@@ -156,14 +156,6 @@ aws apigateway import-rest-api --body 'api-config.json'
 
 ---
 
-testes com jest, adicionar eslint verificação de imports e exports,
-
-na parte dos testes a gente tem que pensar , em quais partes mais dao erros durante o desenvolvimento e quais são
-mais chatas de testar? 
-
-formulários
-rotas funcionais, assim que entra um update deve testar todas as rotas,
-
 
 
 

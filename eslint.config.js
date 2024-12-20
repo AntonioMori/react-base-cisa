@@ -4,6 +4,9 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import reactRefresh from "eslint-plugin-react-refresh";
 import stylistic from "@stylistic/eslint-plugin";
+import jsxA11y from "eslint-plugin-jsx-a11y"; // Importa o plugin
+import reactHooks from "eslint-plugin-react-hooks"; // Importa o plugin
+
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -20,6 +23,8 @@ export default [
 		plugins: {
 			"react-refresh": reactRefresh,
 			"@stylistic": stylistic, // Importando o plugin corretamente no ESM
+			"jsx-a11y": jsxA11y, // Registra o plugin
+			"react-hooks": reactHooks, // Registra o plugin
 		},
 		settings: {
 			react: {
@@ -27,12 +32,18 @@ export default [
 			},
 		},
 		rules: {
-			// React Refresh
-			"react-refresh/only-export-components": [
+			...jsxA11y.configs.recommended.rules, // Usa as regras recomendadas do JSX a11y (rules voltadas a acessibilidade)
+			
+			//rules voltadas ao react hooks
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
+			"react-refresh/only-export-components": [ //auto importa o react no escopo
 				"warn",
 				{ allowConstantExport: true },
 			],
 			"react/react-in-jsx-scope": "off", // Desativa a exigência de React no escopo
+
+
 
 			// Stylistic Rules disponíveis em "https://eslint.style/packages/default"
 			"@stylistic/array-bracket-spacing": [ "warn", "always", { "objectsInArrays": true, "arraysInArrays": true } ], // adiciona espaçamento entre colchetes, exemplo [ componente1, compoentente2 ] e não [componente1,componente2]
@@ -53,10 +64,6 @@ export default [
 			"@stylistic/comma-spacing": [ "warn", { "before": false, "after": true } ], // Adiciona espaço após vírgulas
 			"@stylistic/comma-style": [ "warn", "last" ], // Adiciona vírgula no final e nao no início da linha
 			"@stylistic/curly-newline": [ "warn", "always" ], // obriga a quebra de linha após abrir um bloc com chaves {}
-			
-
-
-      
 			"@stylistic/implicit-arrow-linebreak": [ "warn", "beside" ], // Adiciona a seta da arrow function na mesma linha que o corpo da função
 			"@stylistic/indent": [ "warn", "tab", { SwitchCase: 1, ignoreComments: true } ], // Usa tabulação para indentação ao invés de spaces
 			"@stylistic/indent-binary-ops": [ "warn", "tab" ], // Usa tabulação para indentação de operadores binários ** && etc
@@ -151,8 +158,6 @@ export default [
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
 			"@stylistic/eol-last": [ "warn", "always" ], // Garante uma linha em branco no final do arquivo
 			"@stylistic/func-call-spacing": [ "warn", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
-
 		},
 	},
-
 ];
