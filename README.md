@@ -98,6 +98,7 @@ public/
 - **AWS SDK**: Para integração com serviços AWS como Lambda e API Gateway.
 - **AWS Lambda e API Gateway**: Estrutura para construir e expor APIs serverless de forma escalável.
 - **Material UI**: Biblioteca de componentes react que implementa o "Google's Material Design".
+- **Jest ts-jest**: Testing library
 
 ---
 
