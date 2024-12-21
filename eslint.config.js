@@ -6,6 +6,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import stylistic from "@stylistic/eslint-plugin";
 import jsxA11y from "eslint-plugin-jsx-a11y"; // Importa o plugin
 import reactHooks from "eslint-plugin-react-hooks"; // Importa o plugin
+import jestPlugin from "eslint-plugin-jest";
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -158,6 +159,18 @@ export default [
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
 			"@stylistic/eol-last": [ "warn", "always" ], // Garante uma linha em branco no final do arquivo
 			"@stylistic/func-call-spacing": [ "warn", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
+		},
+	},
+	{
+		files: [ "**/*.{test,spec}.{js,ts,jsx,tsx}" ], // Aplica apenas aos arquivos de teste
+		plugins: {
+			"jest": jestPlugin, // Ativa o plugin Jest
+		},
+		env: {
+			"jest/globals": true, // Adiciona os globais do Jest
+		},
+		rules: {
+			...jestPlugin.configs.recommended.rules, // Regras recomendadas do Jest
 		},
 	},
 ];

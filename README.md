@@ -155,7 +155,22 @@ aws apigateway import-rest-api --body 'api-config.json'
 ```
 
 ---
+adicionado jest com ts-jest para funcionamento do jest em vite, excluindo a possibilidade não implementada de testes nos
+recursos:
+
+- import.meta:
+O Jest não compreende import.meta nativamente porque ele é baseado em CJS por padrão, enquanto import.meta é específico de ESM.
+
+- Transformações .vue
+O Jest precisa de transformadores específicos para entender e processar os arquivos .vue. Sem isso, ele trata os arquivos como texto bruto, gerando erros.
+
+Conclusão
+Esses recursos foram projetados para melhorar a experiência de desenvolvimento e a performance no Vite. Eles facilitam o trabalho com módulos dinâmicos e o desenvolvimento em frameworks como Vue.js. Se você está usando o Jest, precisará configurar transformadores adicionais (como o vite-jest) para que esses recursos sejam corretamente interpretados.
 
 
+eslint-plugin-jest 
+
+
+Esse trecho da documentação explica como configurar o ESLint para evitar erros ao usar Jest nos arquivos de teste. O problema principal que ele aborda é que o ESLint, por padrão, não conhece os globais do Jest (como describe, it, expect, etc.), o que pode gerar erros como no-undef. A seguir, explicarei cada solução apresentada:
 
 
