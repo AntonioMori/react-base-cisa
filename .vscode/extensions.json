@@ -3,6 +3,7 @@
 		"dbaeumer.vscode-eslint",
 		"wix.vscode-import-cost",
 		"vscode-icons-team.vscode-icons",
-		"dracula-theme.theme-dracula"
+		"dracula-theme.theme-dracula",
+		"vitest.explorer"
 	]
 }

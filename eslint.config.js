@@ -6,7 +6,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import stylistic from "@stylistic/eslint-plugin";
 import jsxA11y from "eslint-plugin-jsx-a11y"; // Importa o plugin
 import reactHooks from "eslint-plugin-react-hooks"; // Importa o plugin
-import jestPlugin from "eslint-plugin-jest";
+import vitestPlugin from "eslint-plugin-vitest";
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -162,15 +162,15 @@ export default [
 		},
 	},
 	{
-		files: [ "**/*.{test,spec}.{js,ts,jsx,tsx}" ], // Aplica apenas aos arquivos de teste
+		files: [ "**/*.{test,spec}.{js,ts,jsx,tsx}" ],
 		plugins: {
-			"jest": jestPlugin, // Ativa o plugin Jest
+			"vitest": vitestPlugin,
 		},
 		env: {
-			"jest/globals": true, // Adiciona os globais do Jest
+			"vitest/globals": true,
 		},
 		rules: {
-			...jestPlugin.configs.recommended.rules, // Regras recomendadas do Jest
+			...vitestPlugin.configs.recommended.rules,
 		},
 	},
 ];
