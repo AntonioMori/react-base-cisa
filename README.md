@@ -1,6 +1,6 @@
 # Template de Desenvolvimento Web
 
-Este é um template para desenvolvimento web utilizando **React**, **Vite**, **TypeScript**, **SWC (Speedy Web Compiler)**, **ESLint**, **ESLint Stylistic**, **Zustand** e **AWS Sandbox (SDK, Lambda, API Gateway)**.
+Este é um template para desenvolvimento web utilizando **React**, **Vite**, **TypeScript**, **SWC (Speedy Web Compiler)**, **ESLint**, **ESLint Stylistic**, **Zustand**, **AWS Sandbox (SDK, Lambda, API Gateway)** e ++.
 
 
 
@@ -75,8 +75,9 @@ src/
 │       ├── About.test.tsx
 │       └── About.module.css
 ├── services/    	             # Configurações de APIs e AWS SDK
-├── state/   			         # Configuração do Zustand (gerenciamento de estado)
-├── utils/                       # Funções utilitárias e helpers
+├── utils/           
+│   ├── state/ # Configuração do Zustand (gerenciamento de estado)
+│                   # Funções utilitárias e helpers
 ├── App.tsx                      # Arquivo principal do React (root onde serão aplicados Authenticators, contexts e routes)
 ├── main.tsx                     # Arquivo de inicialização com ReactDOM
 └── vite-env.d.ts                # Tipos específicos do Vite
@@ -84,6 +85,12 @@ src/
 public/
 ├── index.html                   # Template principal
 ├── favicon.ico                  # Favicon do site
+
+.vscode/
+├── extensions.json              # Extensões recomendadas para o desenvolvimento
+├── settings.json                # Configurações padrões para a utilização correta do estlint e testes estáticos
+
+
 ```
 
 ---
@@ -93,12 +100,13 @@ public/
 - **Vite**: Build tool moderno e super-rápido para desenvolvimento web.
 - **TypeScript**: Adiciona tipagem estática ao JavaScript, garantindo código mais seguro e escalável.
 - **SWC (Speedy Web Compiler)**: Compilador rápido para transpilar código TypeScript e JavaScript, melhorando o desempenho.
-- **ESLint + Stylistic**: Ferramentas para garantir a qualidade do código e consistência no estilo.
+- **ESLint + Stylistic**: Ferramentas para garantir a qualidade do código e consistência no estilo (Testes estáticos).
+- **Vitest**: Framework de testes ("Vite Native Test Runner") responsável por organizar e executar o ambiente de testes.
+- **React Testing Library**: Testing library, Jest serve como o ambiente que executa e organiza os testes, enquanto a Testing Library ajuda a interagir com o DOM durante os testes.
 - **Zustand**: Biblioteca leve para gerenciamento de estado global, oferecendo simplicidade e flexibilidade.
 - **AWS SDK**: Para integração com serviços AWS como Lambda e API Gateway.
 - **AWS Lambda e API Gateway**: Estrutura para construir e expor APIs serverless de forma escalável.
 - **Material UI**: Biblioteca de componentes react que implementa o "Google's Material Design".
-- **Jest ts-jest**: Testing library
 
 ---
 
@@ -130,9 +138,10 @@ Para contribuir com este projeto:
 ### 4. **To-Do List**
 - [x] Configuração inicial do projeto com Vite.
 - [x] Integração do SWC para compilação.
-- [x] Configuração do Zustand para gerenciamento de estado.
 - [x] Linter configurado com ESLint e Stylistic.
-- [ ] Configuração de rotas com `react-router-dom`.
+- [x] Configuração de rotas com `react-router-dom`.
+- [x] implementar vitest
+- [ ] Configuração do Zustand para gerenciamento de estado.
 - [ ] Implementação de exemplo básico de AWS Lambda e API Gateway.
 - [ ] Testes unitários e integração com CI/CD.
 
@@ -165,13 +174,20 @@ O Jest não compreende import.meta nativamente porque ele é baseado em CJS por 
 - Transformações .vue
 O Jest precisa de transformadores específicos para entender e processar os arquivos .vue. Sem isso, ele trata os arquivos como texto bruto, gerando erros.
 
-Conclusão
+## Conclusão
 Esses recursos foram projetados para melhorar a experiência de desenvolvimento e a performance no Vite. Eles facilitam o trabalho com módulos dinâmicos e o desenvolvimento em frameworks como Vue.js. Se você está usando o Jest, precisará configurar transformadores adicionais (como o vite-jest) para que esses recursos sejam corretamente interpretados.
 
 
-eslint-plugin-jest 
 
+## eslint-plugin-jest 
 
 Esse trecho da documentação explica como configurar o ESLint para evitar erros ao usar Jest nos arquivos de teste. O problema principal que ele aborda é que o ESLint, por padrão, não conhece os globais do Jest (como describe, it, expect, etc.), o que pode gerar erros como no-undef. A seguir, explicarei cada solução apresentada:
+
+
+
+## Correção
+Para corrigir os dois erros acima, utilizaremos a mudança para o ViTest, que é o "tester runner" nativo do vite que tem uma performance muito melhor que a do jest e é mais bem integrável com o vite
+
+"This is Vitest, a next generation testing framework powered by Vite."
 
 
