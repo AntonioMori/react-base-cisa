@@ -22,7 +22,14 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "baseUrl": "./",
+    "paths": {
+      "themes/*": ["themes/*"],
+      "components/*": ["components/*"],
+      "utils/*": ["utils/*"],
+      "@/*": ["./*"]
+    },
   },
   "include": ["src"]
 }
