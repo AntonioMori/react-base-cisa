@@ -29,7 +29,7 @@
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 	"[jsonc]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
