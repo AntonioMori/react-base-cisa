@@ -4,6 +4,7 @@
 		"wix.vscode-import-cost",
 		"vscode-icons-team.vscode-icons",
 		"dracula-theme.theme-dracula",
-		"vitest.explorer"
+		"vitest.explorer",
+		"darkphoenix.split-mui-imports"
 	]
 }
