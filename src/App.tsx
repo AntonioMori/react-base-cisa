@@ -2,12 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-
-
+import { ThemeProvider } from "@mui/material";
+import ProjectTheme from "themes/ProjectTheme";
 
 function App () {
 	const [ teste ] = useState([ 1, 2, 3, 4, 5 ]);
-
+	
 	console.log("teste", teste);
 
 	const arrowFunctionTeste = () => {
@@ -29,15 +29,17 @@ function App () {
 
 	return (
 		<Router>
-			<main>
-				{/* <header>
+			<ThemeProvider theme={ProjectTheme}>
+				<main>
+					{/* <header>
               <h1>Bem-vindo, {user?.username}!</h1>
               <button onClick={signOut}>Sair</button>
             </header> */}
-				<Routes>
-					<Route path='/' element={<Home />} />
-				</Routes>
-			</main>
+					<Routes>
+						<Route path='/' element={<Home />} />
+					</Routes>
+				</main>
+			</ThemeProvider>
 		</Router>
 	);
 }
