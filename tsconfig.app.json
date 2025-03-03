@@ -23,7 +23,7 @@
     "noUncheckedSideEffectImports": true,
 
     "types": ["vitest/globals"],
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
       "themes/*": ["themes/*"],
       "components/*": ["components/*"],
