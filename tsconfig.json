@@ -1,3 +1,7 @@
+// tsconfig.json é responsável por configurar o TypeScript para o projeto como um todo, incluindo tanto o frontend quanto o backend.
+// Ele referencia outros arquivos de configuração específicos, como tsconfig.app.json e tsconfig.node.json.
+// precisamos de um tsconfig para o front que é o tsconfig.app.json e um para o back que é o tsconfig.node.json devido a 
+// necessidade de diferentes configurações por ambiente
 {
   "files": [],
   "references": [

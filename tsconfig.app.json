@@ -1,13 +1,17 @@
+// tsconfig.app.json é responsável por configurar o TypeScript para o aplicativo principal na parte do frontend.
 {
   "compilerOptions": {
+    // Arquivo para cache incremental - melhora performance de compilação
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    
+    // Configurações de target e compilação
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Configurações do Bundler (Vite) */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
@@ -15,21 +19,50 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* Configurações de Linting - melhoram a qualidade do código */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "types": ["vitest/globals"],
+    /* Configurações para testes com Vitest */
+    "types": ["vitest/globals", "node"],
+    
+    /* Configuração de aliases - deve ser consistente com vite.config.js */
     "baseUrl": "./src",
     "paths": {
-      "themes/*": ["themes/*"],
-      "components/*": ["components/*"],
-      "utils/*": ["utils/*"],
-      "@/*": ["./*"]
-    },
+      // Alias principal - mais flexível e padrão
+      "@/*": ["./*"],
+      
+      // Aliases específicos para cada pasta
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@services/*": ["services/*"],
+      "@assets/*": ["assets/*"],
+      "@themes/*": ["themes/*"],
+      "@types/*": ["types/*"]
+    }
   },
-  "include": ["src"]
+  
+  /* Arquivos incluídos na compilação */
+  "include": [
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  
+  /* Arquivos excluídos da compilação */
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ]
 }

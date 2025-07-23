@@ -6,24 +6,26 @@
 	"editor.formatOnSave": true, // habilita formatar o código ao salvar
 	"editor.tabSize": 2, // define o tamanho da tabulação
 	"editor.fontSize": 14,
-	"editor.rulers": [120], // define as linhas verticais
+	"editor.rulers": [
+		120
+	], // define as linhas verticais
 	"editor.renderLineHighlight": "line", // define o estilo do realce da linha atual
-	"editor.fontLigatures": true,	//permite ligaduras de fonte para melhorar a legibilidade
+	"editor.fontLigatures": true, //permite ligaduras de fonte para melhorar a legibilidade
 	"explorer.compactFolders": false, // define se as pastas são compactadas
 	"breadcrumbs.enabled": true, // define se o caminho no começo está habilitado
 	"breadcrumbs.filePath": "on", // define se o caminho no começo está habilitado
-	"breadcrumbs.showFunctions":true,
+	"breadcrumbs.showFunctions": true,
 	"breadcrumbs.showFiles": true,
 	"editor.insertSpaces": false, // define se a tabulação é feita com espaços ou tabs
 	// "editor.minimap.maxColumn": 60,    
 	"editor.minimap.renderCharacters": true,
-	"editor.codeActionsOnSave": { 
+	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always" // define que o eslint deve corrigir automaticamente os problemas ao salvar
 	},
 	"files.eol": "\n", // define o tipo de quebra de linha
 	"typescript.tsdk": "node_modules/typescript/lib", // define o caminho para o typescript
-	"eslint.workingDirectories": [  // define o diretório de trabalho do eslint
-		"./"  
+	"eslint.workingDirectories": [ // define o diretório de trabalho do eslint
+		"./"
 	],
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -35,6 +37,3 @@
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	}
 }
-
-
-

@@ -1,24 +1,44 @@
+// tsconfig.node.json é responsável por configurar o TypeScript para o ambiente Node.js, como o servidor ou scripts de build. 
+// (AINDA É NECESSÁRIO da configuração presente no vite.config.js)
 {
   "compilerOptions": {
+    // Cache para melhorar performance de compilação
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    // Configurações específicas para Node.js - mais recente que a aplicação
     "target": "ES2022",
-    "lib": ["ES2023"],
+    "lib": [
+      "ES2023"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
+    /* Configurações do Bundler */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-
-    /* Linting */
+    /* Configurações de Linting - mesmas da aplicação */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    /* Tipos específicos para Node.js */
+    "types": [
+      "node"
+    ]
   },
-  "include": ["vite.config.js", "src/**/*.ts"]
+  /* 
+    Arquivos específicos do ambiente Node.js
+    Inclui arquivos de configuração e scripts que rodam no servidor
+  */
+  "include": [
+    "vite.config.js",
+    "vite.config.ts",
+    "vitest.config.js",
+    "vitest.config.ts",
+    "scripts/**/*",
+    "build/**/*",
+    "src/**/*.ts"
+  ]
 }

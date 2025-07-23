@@ -15,8 +15,11 @@ export default [
 		files: [ "**/*.{js,mjs,cjs,ts,jsx,tsx}" ],
 		languageOptions: {
 			globals: globals.browser,
+			__dirname: "readonly",
 		},
 	},
+
+
 	pluginJs.configs.recommended,
 	...tseslint.configs.recommended,
 	pluginReact.configs.flat.recommended,
@@ -33,20 +36,27 @@ export default [
 			},
 		},
 		rules: {
-			...jsxA11y.configs.recommended.rules, // Usa as regras recomendadas do JSX a11y (rules voltadas a acessibilidade)
-			
-			//rules voltadas ao react hooks
+			...jsxA11y.configs.recommended.rules, 
+			// Usa as regras recomendadas do JSX a11y (rules voltadas a acessibilidade)
+			// que são: 
+			// "jsx-a11y/alt-text": "warn",
+			// "jsx-a11y/anchor-is-valid": "warn",
+			// "jsx-a11y/aria-role": "warn",
+
+			//regras voltadas ao react hooks
 			"react-hooks/rules-of-hooks": "error",
 			"react-hooks/exhaustive-deps": "warn",
 			"react-refresh/only-export-components": [ //auto importa o react no escopo
 				"warn",
 				{ allowConstantExport: true },
 			],
-			"react/react-in-jsx-scope": "off", // Desativa a exigência de React no escopo
+			"react/react-in-jsx-scope": "warn", // Desativa a exigência de React no escopo
+			
 
 
 
 			// Stylistic Rules disponíveis em "https://eslint.style/packages/default"
+
 			"@stylistic/array-bracket-spacing": [ "warn", "always", { "objectsInArrays": true, "arraysInArrays": true } ], // adiciona espaçamento entre colchetes, exemplo [ componente1, compoentente2 ] e não [componente1,componente2]
 			"@stylistic/arrow-parens": [ "warn", "always" ], // Sempre adiciona parênteses em arrow functions mesmo que ela tenha somente um parâmentro exemplo "(a) => {}" e não "(a) => retunr teste;"
 			"@stylistic/arrow-spacing": "warn", // Adiciona espaço antes e depois da seta em arrow functions de "(a)=>{}" para "(a) => {}"
@@ -101,6 +111,7 @@ export default [
         // limita a quantidade de props por linha , se for uma propriedade por linha max 4, se for mais de 4 propriedades por linha 
         //então limita a 1 por linha
 			"@stylistic/jsx-pascal-case": [ "error", { allowAllCaps: false, allowNamespace: false, allowLeadingUnderscore: true } ],
+			
 			  // obriga que os componentes jsx sejam escritos em PascalCase
 			"@stylistic/jsx-props-no-multi-spaces": "warn", // não permite mais de um espaço em branco entre as props na mesma linha 
         //exemplo errado:
@@ -159,6 +170,21 @@ export default [
 			"@stylistic/object-curly-spacing": [ "warn", "always" ], // Adiciona espaços dentro de chaves { chave: valor }
 			"@stylistic/eol-last": [ "warn", "always" ], // Garante uma linha em branco no final do arquivo
 			"@stylistic/func-call-spacing": [ "warn", "never" ], // Não permite espaços entre o nome da função e os parênteses de chamada
+
+
+
+
+			"no-unused-vars": "warn",
+			"no-undef": "warn",
+			"no-console": "warn", // Permite console.log, mas alerta
+			"curly": "error", // Exige chaves em blocos if/else/for
+			
+
+
+
+
+
+
 		},
 	},
 	{
