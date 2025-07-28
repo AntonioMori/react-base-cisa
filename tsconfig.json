@@ -7,6 +7,13 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
-  
+  ],
+  // This baseUrl and paths configuration is essential for shadcn/ui
+  // It tells TypeScript how to resolve the "@/*" imports that shadcn components use
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }

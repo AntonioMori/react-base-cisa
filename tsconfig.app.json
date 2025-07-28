@@ -31,6 +31,9 @@
     
     /* Configuração de aliases - deve ser consistente com vite.config.js */
     "baseUrl": "./src",
+    
+
+    
     "paths": {
       // Alias principal - mais flexível e padrão
       "@/*": ["./*"],

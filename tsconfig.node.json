@@ -39,6 +39,7 @@
     "vitest.config.ts",
     "scripts/**/*",
     "build/**/*",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ]
 }

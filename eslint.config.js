@@ -15,7 +15,7 @@ export default [
 		files: [ "**/*.{js,mjs,cjs,ts,jsx,tsx}" ],
 		languageOptions: {
 			globals: globals.browser,
-			__dirname: "readonly",
+			// __dirname: "readonly",
 		},
 	},
 
@@ -36,7 +36,7 @@ export default [
 			},
 		},
 		rules: {
-			...jsxA11y.configs.recommended.rules, 
+			...jsxA11y.configs.recommended.rules,
 			// Usa as regras recomendadas do JSX a11y (rules voltadas a acessibilidade)
 			// que são: 
 			// "jsx-a11y/alt-text": "warn",
@@ -50,7 +50,7 @@ export default [
 				"warn",
 				{ allowConstantExport: true },
 			],
-			"react/react-in-jsx-scope": "warn", // Desativa a exigência de React no escopo
+			"react/react-in-jsx-scope": "off", // Desativa a exigência de React no escopo
 			
 
 
@@ -173,8 +173,8 @@ export default [
 
 
 
-
-			"no-unused-vars": "warn",
+			"@typescript-eslint/no-unused-vars": "off",
+			"no-unused-vars": "off",
 			"no-undef": "warn",
 			"no-console": "warn", // Permite console.log, mas alerta
 			"curly": "error", // Exige chaves em blocos if/else/for
